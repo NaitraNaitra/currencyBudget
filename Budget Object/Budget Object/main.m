@@ -9,37 +9,58 @@
 
 #import <Foundation/Foundation.h>
 #import "budget.h"
+#import "Transaction.h"
 
 int main(int argc, const char * argv[])
 {
     
-    
-    double numberEuros = 100;
-    NSNumber *englandDollarTransaction = @100.00;
     double numberPounds = 100;
-    //two transactions NSMutableArray will be looking for.
-    NSNumber *europeDollarTransaction = @100.00;
-    NSNumber *europeDollarTransaction2 = @200.00;
+    NSNumber *englandDollarTransaction = @100.00;
     
     
-    NSMutableArray *europeTransactions = [[NSMutableArray alloc] initWithCapacity:1];
-    [europeTransactions addObject:europeDollarTransaction];
-    [europeTransactions addObject:europeDollarTransaction2];
+    NSMutableArray *transactions = [[NSMutableArray alloc] initWithCapacity:10];
+    Transaction *aTransaction;
+    for (int n = 1; n < 2; n++) {
+        aTransaction = [Transaction new];
+        [aTransaction createTransaction:n*100 ofType:cash];
+        [transactions addObject:aTransaction];
+    }
+    
+    int n =1;
+    while (n < 3) {
+        aTransaction = [Transaction new];
+        [aTransaction createTransaction:n*100 ofType:charge];
+        [transactions addObject:aTransaction];
+        n++;
+    }
+    
+    do { aTransaction = [Transaction new];
+        [aTransaction createTransaction:n*100 ofType:charge];
+        [transactions addObject:aTransaction];
+        n++;
+    } while (n<=3);
+    
+    
+   
 
     
-    //Sends a messege to Budget object to make europe.Budget
+    
     Budget *europeBudget = [Budget new];
-    //send the data to europeBudget(. lol)exchangeRate + budget.
     [europeBudget createBudget:1000.00 withExchangeRate:1.2500];
-    
-    
-    for (NSNumber *aTransaction in europeTransactions){
-        [europeBudget spendDollars:aTransaction];
+    for (Transaction *aTransaction in transactions)
+    {
+        switch ([aTransaction returnType]) {
+            case cash:
+                [europeBudget spendDollars:[aTransaction returnAmount]];
+                break;
+            case charge:
+                [europeBudget chargeForeignCurrency:[[aTransaction returnAmount] doubleValue]];
+                break;
+                
+            default:
+                break;
+        }
     }
-    [europeBudget chargeForeignCurrency:numberEuros];
-    
-    /* Takes each entry in the array and COPIES it to the variable that you have declared
-     */
     
     
     
