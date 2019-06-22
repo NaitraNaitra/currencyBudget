@@ -10,64 +10,44 @@
 #import <Foundation/Foundation.h>
 #import "budget.h"
 #import "Transaction.h"
-
+#import "CreditCardTransaction.h"
+#import "CashTransaction.h"
 int main(int argc, const char * argv[])
 {
     
-    double numberPounds = 100;
-    NSNumber *englandDollarTransaction = @100.00;
-    
+    Budget *europeBudget = [Budget new];
+    [europeBudget createBudget:1000.00 withExchangeRate:1.2500];
+    Budget *englandBudget = [Budget new];
+    [englandBudget createBudget:2000.00 withExchangeRate:1.5000];
     
     NSMutableArray *transactions = [[NSMutableArray alloc] initWithCapacity:10];
     Transaction *aTransaction;
     for (int n = 1; n < 2; n++) {
-        aTransaction = [Transaction new];
-        [aTransaction createTransaction:n*100 ofType:cash];
+        aTransaction = [CashTransaction new];
+        [aTransaction createTransaction:n*100 forBudget:europeBudget];
+        
+        [transactions addObject:aTransaction];
+        aTransaction = [CashTransaction new];
+        [aTransaction createTransaction:n*100 forBudget:englandBudget];
         [transactions addObject:aTransaction];
     }
     
     int n =1;
-    while (n < 3) {
-        aTransaction = [Transaction new];
-        [aTransaction createTransaction:n*100 ofType:charge];
+    while (n < 4) {
+        
+        aTransaction = [CreditCardTransaction new];
+        
+        [aTransaction createTransaction:n*100 forBudget:englandBudget];
         [transactions addObject:aTransaction];
         n++;
     }
     
-    do { aTransaction = [Transaction new];
-        [aTransaction createTransaction:n*100 ofType:charge];
-        [transactions addObject:aTransaction];
-        n++;
-    } while (n<=3);
     
-    
-   
-
-    
-    
-    Budget *europeBudget = [Budget new];
-    [europeBudget createBudget:1000.00 withExchangeRate:1.2500];
     for (Transaction *aTransaction in transactions)
     {
-        switch ([aTransaction returnType]) {
-            case cash:
-                [europeBudget spendDollars:[aTransaction returnAmount]];
-                break;
-            case charge:
-                [europeBudget chargeForeignCurrency:[[aTransaction returnAmount] doubleValue]];
-                break;
-                
-            default:
-                break;
-        }
+        [aTransaction spend];
     }
     
-    
-    
-    Budget *englandBudget = [Budget new];
-    [englandBudget createBudget:2000.00 withExchangeRate:1.5000];
-    [englandBudget spendDollars:englandDollarTransaction];
-    [englandBudget chargeForeignCurrency:numberPounds];
     
     return 0;
 }
