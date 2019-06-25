@@ -12,14 +12,17 @@
 
 int main(int argc, const char * argv[])
 {
-    Destination *europe = [Destination new];
+    //Destination *europe = [Destination new];
     NSString *europeText = [[NSString alloc] initWithFormat:@"%@", @"Europe"];
-    [europe createWithCountry:europeText andBudget:1000.00 withExchangeRate:1.2500];
+    //[europe createWithCountry:europeText andBudget:1000.00 withExchangeRate:1.2500];
     
-    Destination *england = [Destination new];
+    Destination* europe = [[Destination alloc]initWithCountry:europeText andBudget:1000.00 withExchangeRate:1.25];
+    
+    
+    //Destination *england = [Destination new];
     NSString *englandText = [[NSString alloc] initWithFormat:@"%@", @"England"];
-    [england createWithCountry:englandText andBudget:2000.00 withExchangeRate:1.5000];
-    
+    //[england createWithCountry:englandText andBudget:2000.00 withExchangeRate:1.5000];
+    Destination* england = [[Destination alloc]initWithCountry:englandText andBudget:2000.00 withExchangeRate:1.50];
     for (int n=1; n < 2; n++)
     {
         double transaction = n*100.00;

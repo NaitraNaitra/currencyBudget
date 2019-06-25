@@ -11,10 +11,18 @@
 
 @implementation Transaction
 
-- (void) createTransaction:(double)theAmount forBudget:(Budget *)aBudget
+/*- (void) createTransaction:(double)theAmount forBudget:(Budget *)aBudget
 {
     budget = aBudget;
     amount = @( theAmount );
+}*/
+
+-(id) initWithAmount:(double)theAmount forBudget:(Budget *)aBudget {
+    if (self =[super init]) {
+        budget = aBudget;
+        amount = @(theAmount);
+    }
+    return self;
 }
 
 - (void) spend

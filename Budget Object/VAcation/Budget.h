@@ -14,7 +14,8 @@
     double exchangeTransaction;
 }
 
-- (void) createBudget: (double) aBudget withExchangeRate:(double)anExchangeRate;
+//- (void) createBudget: (double) aBudget withExchangeRate:(double)anExchangeRate;
+-(id) initWithAmount: (double) aBudget withExchangeRate: (double) anExchangeRate;
 - (void) spendDollars: (NSNumber*) dollars;
 - (void) chargeForeignCurrency: (double)foreignCurrency;
 - (double)returnBalance;

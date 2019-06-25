@@ -10,11 +10,23 @@
 
 @implementation Budget
 
-- (void)createBudget:(double)aBudget withExchangeRate:(double)anExchangeRate
+/*- (void)createBudget:(double)aBudget withExchangeRate:(double)anExchangeRate
 {
     exchangeRate = anExchangeRate;
     budget = aBudget;
+}*/
+
+-(id) initWithAmount:(double)aBudget withExchangeRate:(double)anExchangeRate {
+    if (self = [super init]) {
+        exchangeRate = anExchangeRate;
+        budget = aBudget;
+        
+    }
+    return self;
 }
+
+
+
 
 - (void) spendDollars:(NSNumber*)dollars
 {

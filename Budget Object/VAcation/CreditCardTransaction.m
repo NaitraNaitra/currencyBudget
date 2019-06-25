@@ -11,6 +11,13 @@
 
 @implementation CreditCardTransaction
 
+-(id) initWithAmount:(double)theAmount forBudget:(Budget *)aBudget {
+    if (self = [super initWithAmount:theAmount forBudget:aBudget]){
+        name = @"Credit card";
+        
+    }
+    return self;
+}
 - (void)spend
 {
     [budget chargeForeignCurrency:[amount doubleValue]];

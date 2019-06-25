@@ -11,6 +11,16 @@
 
 @implementation CashTransaction
 
+-(id) initWithAmount:(double)theAmount forBudget:(Budget*)aBudget {
+    if (self = [super initWithAmount:theAmount forBudget:aBudget]){
+        name = @"Cash";
+        
+    }
+    return self;
+}
+
+
+
 - (void) spend {
     [budget spendDollars:amount];
 }
