@@ -14,47 +14,30 @@
 
 @implementation Destination
 
-/*- (void)createWithCountry:(NSString *)theCountry andBudget:(double)budgetAmount withExchangeRate:(double)theExchangeRate
+- (id)initWithCountry:(NSString *)theCountry andBudget:(double)budgetAmount withExchangeRate:(double)theExchangeRate
 {
-    transactions = [[NSMutableArray alloc] initWithCapacity:10];
-    theBudget = [Budget new];
-    [theBudget createBudget:budgetAmount withExchangeRate:theExchangeRate];
-    country = theCountry;
-    NSLog( @"I'm off to %@", theCountry );
-}*/
-
--(id) initWithCountry:(id)theCountry andBudget:(double)budgetAmount withExchangeRate:(double)theExchangeRate{
-    if (self = [super init]){
-        transactions = [[NSMutableArray alloc]initWithCapacity:10];
-        theBudget =[[Budget alloc]initWithAmount:budgetAmount withExchangeRate:theExchangeRate];
-        theExchangeRate;
-        country = theCountry;
-        NSLog(@"I'm off to %@",theCountry);
+    if (self = [super init])
+    {
+        transactions = [[NSMutableArray alloc] initWithCapacity:10];
+        theBudget = [[Budget alloc] initWithAmount:budgetAmount forDestination:self];
+        self.exchangeRate = theExchangeRate;
+        [self setCountry:theCountry];
+        NSLog( @"I'm off to %@", theCountry );
     }
-    return self;
+    return (self);
 }
-
 
 
 - (void)spendCash:(double)amount
 {
-    
-    //Transaction *aTransaction = [CashTransaction new];
-    //[aTransaction createTransaction:amount forBudget:theBudget];
-    Transaction *aTransaction = [[CashTransaction alloc]initWithAmount:amount forBudget:theBudget];
-    
-    
-    
+    Transaction *aTransaction = [[CashTransaction alloc] initWithAmount:amount forBudget:theBudget];
     [transactions addObject:aTransaction];
     [aTransaction spend];
 }
 
 - (void)chargeCreditCard:(double)amount
 {
-    //Transaction *aTransaction = [CreditCardTransaction new];
-    //[aTransaction createTransaction:amount forBudget:theBudget];
-    Transaction *aTransaction = [[CreditCardTransaction alloc]initWithAmount:amount forBudget:theBudget];
-    
+    Transaction *aTransaction = [[CreditCardTransaction alloc] initWithAmount:amount forBudget:theBudget];
     [transactions addObject:aTransaction];
     [aTransaction spend];
 }

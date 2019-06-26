@@ -11,13 +11,15 @@
 
 @interface Destination : NSObject
 {
-    NSString *country;
     NSMutableArray *transactions;
     Budget *theBudget;
 }
 
-/*- (void)createWithCountry:(NSString*)theCountry andBudget:(double) budgetAmount withExchangeRate:(double)theExchangeRate;*/
--(id)initWithCountry: (NSString*) theCountry andBudget: (double) budgetAmount withExchangeRate:(double) theExchangeRate;
+@property (nonatomic, strong) NSString* country;
+@property (readwrite) double exchangeRate;
+
+- (id)initWithCountry: (NSString*)theCountry andBudget:(double) budgetAmount withExchangeRate: (double)theExchangeRate;
+
 - (void)spendCash:(double)amount;
 - (void)chargeCreditCard:(double)amount;
 - (double)leftToSpend;

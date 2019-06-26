@@ -7,26 +7,19 @@
 //
 
 #import "Budget.h"
+#import "Destination.h"
 
 @implementation Budget
 
-/*- (void)createBudget:(double)aBudget withExchangeRate:(double)anExchangeRate
+- (id)initWithAmount:(double)aBudget forDestination:(Destination*)aDestination
 {
-    exchangeRate = anExchangeRate;
-    budget = aBudget;
-}*/
-
--(id) initWithAmount:(double)aBudget withExchangeRate:(double)anExchangeRate {
-    if (self = [super init]) {
-        exchangeRate = anExchangeRate;
+    if (self = [super init])
+    {
+        self.destination = aDestination;
         budget = aBudget;
-        
     }
-    return self;
+    return (self);
 }
-
-
-
 
 - (void) spendDollars:(NSNumber*)dollars
 {
@@ -35,7 +28,7 @@
 
 - (void) chargeForeignCurrency:(double)foreignCurrency
 {
-    exchangeTransaction = foreignCurrency * exchangeRate;
+    exchangeTransaction = foreignCurrency * [self.destination exchangeRate];
     budget -= exchangeTransaction;
 }
 

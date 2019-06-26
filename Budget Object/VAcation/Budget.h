@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Destination;
 
 @interface Budget : NSObject {
     float exchangeRate;
@@ -14,8 +15,9 @@
     double exchangeTransaction;
 }
 
-//- (void) createBudget: (double) aBudget withExchangeRate:(double)anExchangeRate;
--(id) initWithAmount: (double) aBudget withExchangeRate: (double) anExchangeRate;
+@property (nonatomic) Destination *destination;
+
+- (id) initWithAmount: (double) aBudget forDestination: (Destination*) aDestination;
 - (void) spendDollars: (NSNumber*) dollars;
 - (void) chargeForeignCurrency: (double)foreignCurrency;
 - (double)returnBalance;

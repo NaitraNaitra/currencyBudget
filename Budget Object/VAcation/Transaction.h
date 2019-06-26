@@ -18,8 +18,7 @@
     NSNumber *amount;
 }
 
-//- (void) createTransaction: (double) theAmount forBudget: (Budget*) aBudget;
--(id) initWithAmount: (double) theAmount forBudget: (Budget*) aBudget;
+- (id)initWithAmount:(double) theAmount forBudget: (Budget*)aBudget;
 - (void) spend;
 - (NSNumber*) returnAmount;
 
