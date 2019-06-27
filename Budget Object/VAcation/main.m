@@ -13,6 +13,15 @@
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
+        
+        NSString* appDataPath = @"/Users/maxi/Documents/Programming/VAcation/VAcation/AppData.plist";
+        NSMutableDictionary *appDictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:appDataPath];
+        NSString* europeSymbol =[[NSString alloc] initWithFormat:@"%@", [appDictionary valueForKey:@"Europe"]];
+        NSString* englandSymbol =[[NSString alloc] initWithFormat:@"%@", [appDictionary valueForKey:@"England"]];
+        
+        
+        
+        
     
     //Destination *europe = [Destination new];
     NSString *europeText = [[NSString alloc] initWithFormat:@"%@", @"Europe"];
@@ -28,13 +37,13 @@ int main(int argc, const char * argv[])
     for (int n=1; n < 2; n++)
     {
         double transaction = n*100.00;
-        NSLog( @"Sending a %.2f cash transaction", transaction );
+        NSLog( @"Sending a $%.2f cash transaction", transaction );
         [europe spendCash:transaction];
-        NSLog( @"Remaining budget %.2f", [europe leftToSpend] );
+        NSLog( @"Remaining budget $%.2f", [europe leftToSpend] );
         
-        NSLog( @"Sending a %.2f cash transaction", transaction );
+        NSLog( @"Sending a $%.2f cash transaction", transaction );
         [england spendCash:transaction];
-        NSLog( @"Remaining budget %.2f", [england leftToSpend] );
+        NSLog( @"Remaining budget $%.2f", [england leftToSpend] );
     }
     
         [europe setExchangeRate:1.30];
@@ -43,13 +52,13 @@ int main(int argc, const char * argv[])
     while (n < 4)
     {
         double transaction = n*100.00;
-        NSLog( @"Sending a %.2f credit card transaction", transaction );
+        NSLog( @"Sending a %@%.2f credit card transaction",europeSymbol, transaction );
         [europe chargeCreditCard:transaction];
-        NSLog( @"Remaining budget %.2f", [europe leftToSpend] );
+        NSLog( @"Remaining budget $%.2f", [europe leftToSpend] );
         
-        NSLog( @"Sending a %.2f credit card transaction", transaction );
+        NSLog( @"Sending a %@%.2f credit card transaction",englandSymbol, transaction );
         [england chargeCreditCard:transaction];
-        NSLog( @"Remaining budget %.2f", [england leftToSpend] );
+        NSLog( @"Remaining budget $%.2f", [england leftToSpend] );
         
         n++;
         }

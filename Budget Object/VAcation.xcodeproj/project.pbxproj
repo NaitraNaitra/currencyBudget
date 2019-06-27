@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5421A3D822C50FC000C51C42 /* AppData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppData.plist; sourceTree = "<group>"; };
 		5423C39022C1805300ED988B /* VAcation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VAcation; sourceTree = BUILT_PRODUCTS_DIR; };
 		5423C39322C1805300ED988B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5423C39C22C180E000ED988B /* Budget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Budget.h; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 			children = (
 				5423C39322C1805300ED988B /* main.m */,
 				5423C39B22C180A600ED988B /* Classes */,
+				5421A3D822C50FC000C51C42 /* AppData.plist */,
 			);
 			path = VAcation;
 			sourceTree = "<group>";
