@@ -16,8 +16,13 @@ int main(int argc, const char * argv[])
         
         NSString* appDataPath = @"/Users/maxi/Documents/Programming/VAcation/VAcation/AppData.plist";
         NSMutableDictionary *appDictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:appDataPath];
-        NSString* europeSymbol =[[NSString alloc] initWithFormat:@"%@", [appDictionary valueForKey:@"Europe"]];
-        NSString* englandSymbol =[[NSString alloc] initWithFormat:@"%@", [appDictionary valueForKey:@"England"]];
+        NSDictionary* europeDictionary = appDictionary[@"Europe"];
+        NSDictionary* englandDictionary = appDictionary[@"England"];
+        
+        
+        
+        NSString* europeSymbol =[[NSString alloc] initWithFormat:@"%@", [europeDictionary[@"Symbol"]];
+        NSString* englandSymbol =[[NSString alloc] initWithFormat:@"%@", [englandDictionary[@"Symbol"]];
         
         
         
@@ -34,7 +39,8 @@ int main(int argc, const char * argv[])
     NSString *englandText = [[NSString alloc] initWithFormat:@"%@", @"England"];
     
     Destination* england = [[Destination alloc]initWithCountry:englandText andBudget:2000.00 withExchangeRate:1.500];
-    for (int n=1; n < 2; n++)
+    
+        for (int n=1; n < 2; n++)
     {
         double transaction = n*100.00;
         NSLog( @"Sending a $%.2f cash transaction", transaction );
