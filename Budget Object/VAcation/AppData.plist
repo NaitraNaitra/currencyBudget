@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Europe</key>
+	<key>Budgets</key>
 	<dict>
-		<key>Currency</key>
-		<string>euro</string>
-		<key>Symbol</key>
-		<string>€</string>
+		<key>England</key>
+		<real>120</real>
+		<key>Europe</key>
+		<real>-760</real>
 	</dict>
 	<key>England</key>
 	<dict>
@@ -15,6 +15,13 @@
 		<string>pound</string>
 		<key>Symbol</key>
 		<string>£</string>
+	</dict>
+	<key>Europe</key>
+	<dict>
+		<key>Currency</key>
+		<string>euro</string>
+		<key>Symbol</key>
+		<string>€</string>
 	</dict>
 </dict>
 </plist>

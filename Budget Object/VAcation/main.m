@@ -18,11 +18,26 @@ int main(int argc, const char * argv[])
         NSMutableDictionary *appDictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:appDataPath];
         NSDictionary* europeDictionary = appDictionary[@"Europe"];
         NSDictionary* englandDictionary = appDictionary[@"England"];
+        double europeBudget = 1000;
+        double englandBudget = 2000;
+        NSMutableDictionary* budgetsDictionary = appDictionary [@"Budgets"];
+        if (budgetsDictionary){
+            europeBudget = [budgetsDictionary[@"Europe"]doubleValue];
+            englandBudget = [budgetsDictionary[@"England"]doubleValue];
+        }
+        else {
+            NSNumber* europeBalance = @( europeBudget );
+            NSNumber* englandBalance = @( englandBudget );
+            budgetsDictionary = [[NSMutableDictionary alloc]initWithObjectsAndKeys:europeBalance,@"Europe",englandBalance,@"England", nil];
+            appDictionary[@"Budgets"] = budgetsDictionary;
+        }
+        NSLog(@"You have $%.2f to spend in Europe", europeBudget);
+        NSLog(@"You have $%.2f to spend in England", englandBudget);
         
         
+        NSString* europeSymbol = [[NSString alloc] initWithFormat:@"%@", europeDictionary[@"Symbol"] ];
         
-        NSString* europeSymbol =[[NSString alloc] initWithFormat:@"%@", [europeDictionary[@"Symbol"]];
-        NSString* englandSymbol =[[NSString alloc] initWithFormat:@"%@", [englandDictionary[@"Symbol"]];
+        NSString* englandSymbol =[[NSString alloc] initWithFormat:@"%@", englandDictionary[@"Symbol"]];
         
         
         
@@ -30,15 +45,13 @@ int main(int argc, const char * argv[])
     
     //Destination *europe = [Destination new];
     NSString *europeText = [[NSString alloc] initWithFormat:@"%@", @"Europe"];
-   
-    
-    Destination* europe = [[Destination alloc]initWithCountry:europeText andBudget:1000.00 withExchangeRate:1.250];
+    Destination* europe = [[Destination alloc]initWithCountry:europeText andBudget:europeBudget withExchangeRate:1.250];
     
     
     //Destination *england = [Destination new];
     NSString *englandText = [[NSString alloc] initWithFormat:@"%@", @"England"];
     
-    Destination* england = [[Destination alloc]initWithCountry:englandText andBudget:2000.00 withExchangeRate:1.500];
+    Destination* england = [[Destination alloc]initWithCountry:englandText andBudget:englandBudget withExchangeRate:1.500];
     
         for (int n=1; n < 2; n++)
     {
@@ -68,6 +81,12 @@ int main(int argc, const char * argv[])
         
         n++;
         }
+        NSNumber* europeBalance = @( [europe leftToSpend] );
+        NSNumber* englandBalance = @( [england leftToSpend] );
+        budgetsDictionary[@"Europe" ] = europeBalance;
+                          budgetsDictionary[@"England" ] = englandBalance;
+                                            [appDictionary writeToFile:appDataPath atomically:YES];
+    
     }
     
     return 0;
