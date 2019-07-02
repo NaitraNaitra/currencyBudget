@@ -20,7 +20,7 @@ int main(int argc, const char * argv[])
         NSDictionary* englandDictionary = appDictionary[@"England"];
         double europeBudget = 1000;
         double englandBudget = 2000;
-        NSMutableDictionary* budgetsDictionary = appDictionary [@"Budgets"];
+        /*NSMutableDictionary* budgetsDictionary = appDictionary [@"Budgets"];
         if (budgetsDictionary){
             europeBudget = [budgetsDictionary[@"Europe"]doubleValue];
             englandBudget = [budgetsDictionary[@"England"]doubleValue];
@@ -30,7 +30,19 @@ int main(int argc, const char * argv[])
             NSNumber* englandBalance = @( englandBudget );
             budgetsDictionary = [[NSMutableDictionary alloc]initWithObjectsAndKeys:europeBalance,@"Europe",englandBalance,@"England", nil];
             appDictionary[@"Budgets"] = budgetsDictionary;
+        }*/
+        
+        
+        NSArray* tripBalance = nil;
+        NSString* balancePath = @"/Users/maxi/Documents/Programming/VAcation/VAcation/BalanceData.txt";
+        
+        if([[NSFileManager defaultManager]fileExistsAtPath:balancePath]){
+            tripBalance = [[NSArray alloc]initWithContentsOfFile:balancePath];
+            europeBudget = [tripBalance[0]doubleValue];
+            englandBudget = [tripBalance[1]doubleValue];
         }
+        
+        
         NSLog(@"You have $%.2f to spend in Europe", europeBudget);
         NSLog(@"You have $%.2f to spend in England", englandBudget);
         
@@ -83,10 +95,11 @@ int main(int argc, const char * argv[])
         }
         NSNumber* europeBalance = @( [europe leftToSpend] );
         NSNumber* englandBalance = @( [england leftToSpend] );
-        budgetsDictionary[@"Europe" ] = europeBalance;
-                          budgetsDictionary[@"England" ] = englandBalance;
-                                            [appDictionary writeToFile:appDataPath atomically:YES];
-    
+        //budgetsDictionary[@"Europe" ] = europeBalance;
+                          //budgetsDictionary[@"England" ] = englandBalance;
+                                            //[appDictionary writeToFile:appDataPath atomically:YES];
+        tripBalance = [[NSArray alloc] initWithObjects:europeBalance,englandBalance, nil];
+        [tripBalance writeToFile:balancePath atomically:YES];
     }
     
     return 0;
