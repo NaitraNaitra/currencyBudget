@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Destination+ATM.h"
 #import "Destination.h"
 
 int main(int argc, const char * argv[])
@@ -92,7 +92,14 @@ int main(int argc, const char * argv[])
         NSLog( @"Remaining budget $%.2f", [england leftToSpend] );
         
         n++;
-        }
+    }
+     
+        NSLog(@"Sending a $50.00 ATM transaction");
+        [europe useAtm:50];
+        NSLog(@"Remainin Budget $%.2f", [europe leftToSpend]);
+        
+        
+        
         NSNumber* europeBalance = @( [europe leftToSpend] );
         NSNumber* englandBalance = @( [england leftToSpend] );
         //budgetsDictionary[@"Europe" ] = europeBalance;
@@ -101,6 +108,7 @@ int main(int argc, const char * argv[])
         tripBalance = [[NSArray alloc] initWithObjects:europeBalance,englandBalance, nil];
         [tripBalance writeToFile:balancePath atomically:YES];
     }
+    
     
     return 0;
 }

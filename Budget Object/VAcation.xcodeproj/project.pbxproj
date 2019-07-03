@@ -13,6 +13,8 @@
 		5423C3A822C180E000ED988B /* CashTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423C3A122C180E000ED988B /* CashTransaction.m */; };
 		5423C3A922C180E000ED988B /* CreditCardTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423C3A322C180E000ED988B /* CreditCardTransaction.m */; };
 		5423C3AA22C180E000ED988B /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423C3A522C180E000ED988B /* Destination.m */; };
+		544DB78822CC1DA300A91408 /* ATMTransactionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 544DB78722CC1DA300A91408 /* ATMTransactionDelegate.m */; };
+		544DB78E22CC200C00A91408 /* Destination+ATM.m in Sources */ = {isa = PBXBuildFile; fileRef = 544DB78D22CC200C00A91408 /* Destination+ATM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,11 @@
 		5423C3A322C180E000ED988B /* CreditCardTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardTransaction.m; sourceTree = "<group>"; };
 		5423C3A422C180E000ED988B /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
 		5423C3A522C180E000ED988B /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
+		544DB78522CC197E00A91408 /* TransactionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDelegate.h; sourceTree = "<group>"; };
+		544DB78622CC1DA300A91408 /* ATMTransactionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMTransactionDelegate.h; sourceTree = "<group>"; };
+		544DB78722CC1DA300A91408 /* ATMTransactionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMTransactionDelegate.m; sourceTree = "<group>"; };
+		544DB78C22CC200C00A91408 /* Destination+ATM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Destination+ATM.h"; sourceTree = "<group>"; };
+		544DB78D22CC200C00A91408 /* Destination+ATM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Destination+ATM.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,11 @@
 				5423C3A322C180E000ED988B /* CreditCardTransaction.m */,
 				5423C3A422C180E000ED988B /* Destination.h */,
 				5423C3A522C180E000ED988B /* Destination.m */,
+				544DB78522CC197E00A91408 /* TransactionDelegate.h */,
+				544DB78622CC1DA300A91408 /* ATMTransactionDelegate.h */,
+				544DB78722CC1DA300A91408 /* ATMTransactionDelegate.m */,
+				544DB78C22CC200C00A91408 /* Destination+ATM.h */,
+				544DB78D22CC200C00A91408 /* Destination+ATM.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -164,6 +176,8 @@
 				5423C3A722C180E000ED988B /* Transaction.m in Sources */,
 				5423C3A922C180E000ED988B /* CreditCardTransaction.m in Sources */,
 				5423C3A822C180E000ED988B /* CashTransaction.m in Sources */,
+				544DB78E22CC200C00A91408 /* Destination+ATM.m in Sources */,
+				544DB78822CC1DA300A91408 /* ATMTransactionDelegate.m in Sources */,
 				5423C3A622C180E000ED988B /* Budget.m in Sources */,
 				5423C3AA22C180E000ED988B /* Destination.m in Sources */,
 				5423C39422C1805300ED988B /* main.m in Sources */,

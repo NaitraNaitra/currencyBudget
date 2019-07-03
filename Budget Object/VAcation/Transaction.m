@@ -15,19 +15,22 @@
 {
     if (self = [super init])
     {
-        budget = aBudget;
-        amount = @( theAmount );
+        self.budget = aBudget;
+        self.amount = @( theAmount );
+        
     }
     return (self);
 }
 
 - (void) spend
 {
-    // fill in the method in subclasses
+    if (self.delegate){
+        [self.delegate spend:self];
+    }
 }
 
 - (NSNumber*)returnAmount {
-    return (amount);
+    return (_amount);
 }
 
 @end

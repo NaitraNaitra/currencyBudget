@@ -21,7 +21,7 @@
 }
 
 - (void) spend {
-    [budget spendDollars:amount];
+    [self.budget spendDollars:self.amount];
 }
 
 @end

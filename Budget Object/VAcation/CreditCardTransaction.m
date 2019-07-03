@@ -20,7 +20,7 @@
 }
 - (void)spend
 {
-    [budget chargeForeignCurrency:[amount doubleValue]];
+    [self.budget chargeForeignCurrency:[self.amount doubleValue]];
 }
 
 @end
