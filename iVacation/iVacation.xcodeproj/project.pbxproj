@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54CC2A4722CD257100D1FB55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A4622CD257100D1FB55 /* main.m */; };
+		54CC2A4A22CD257100D1FB55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A4922CD257100D1FB55 /* AppDelegate.m */; };
+		54CC2A4D22CD257100D1FB55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A4C22CD257100D1FB55 /* ViewController.m */; };
+		54CC2A5022CD257100D1FB55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CC2A4E22CD257100D1FB55 /* Main.storyboard */; };
+		54CC2A5222CD257100D1FB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54CC2A5122CD257100D1FB55 /* Assets.xcassets */; };
+		54CC2A5522CD257100D1FB55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CC2A5322CD257100D1FB55 /* LaunchScreen.storyboard */; };
+		54CC2A6022CD257100D1FB55 /* iVacationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A5F22CD257100D1FB55 /* iVacationTests.m */; };
+		54CC2A6B22CD257100D1FB55 /* iVacationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A6A22CD257100D1FB55 /* iVacationUITests.m */; };
+		54CC2A8822CD2EA400D1FB55 /* Budget.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A7922CD2EA400D1FB55 /* Budget.m */; };
+		54CC2A8922CD2EA400D1FB55 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A7B22CD2EA400D1FB55 /* Transaction.m */; };
+		54CC2A8A22CD2EA400D1FB55 /* CashTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A7D22CD2EA400D1FB55 /* CashTransaction.m */; };
+		54CC2A8B22CD2EA400D1FB55 /* CreditCardTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A7F22CD2EA400D1FB55 /* CreditCardTransaction.m */; };
+		54CC2A8C22CD2EA400D1FB55 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A8122CD2EA400D1FB55 /* Destination.m */; };
+		54CC2A8D22CD2EA400D1FB55 /* ATMTransactionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A8422CD2EA400D1FB55 /* ATMTransactionDelegate.m */; };
+		54CC2A8E22CD2EA400D1FB55 /* Destination+ATM.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CC2A8622CD2EA400D1FB55 /* Destination+ATM.m */; };
+		54CC2A8F22CD2EA400D1FB55 /* AppData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CC2A8722CD2EA400D1FB55 /* AppData.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54CC2A5C22CD257100D1FB55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54CC2A3A22CD257100D1FB55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54CC2A4122CD257100D1FB55;
+			remoteInfo = iVacation;
+		};
+		54CC2A6722CD257100D1FB55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54CC2A3A22CD257100D1FB55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54CC2A4122CD257100D1FB55;
+			remoteInfo = iVacation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54CC2A4222CD257100D1FB55 /* iVacation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVacation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54CC2A4622CD257100D1FB55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		54CC2A4822CD257100D1FB55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		54CC2A4922CD257100D1FB55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		54CC2A4B22CD257100D1FB55 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		54CC2A4C22CD257100D1FB55 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		54CC2A4F22CD257100D1FB55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		54CC2A5122CD257100D1FB55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54CC2A5422CD257100D1FB55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		54CC2A5622CD257100D1FB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54CC2A5B22CD257100D1FB55 /* iVacationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iVacationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54CC2A5F22CD257100D1FB55 /* iVacationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iVacationTests.m; sourceTree = "<group>"; };
+		54CC2A6122CD257100D1FB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54CC2A6622CD257100D1FB55 /* iVacationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iVacationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54CC2A6A22CD257100D1FB55 /* iVacationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iVacationUITests.m; sourceTree = "<group>"; };
+		54CC2A6C22CD257100D1FB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54CC2A7822CD2EA400D1FB55 /* Budget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Budget.h; sourceTree = "<group>"; };
+		54CC2A7922CD2EA400D1FB55 /* Budget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Budget.m; sourceTree = "<group>"; };
+		54CC2A7A22CD2EA400D1FB55 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		54CC2A7B22CD2EA400D1FB55 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		54CC2A7C22CD2EA400D1FB55 /* CashTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashTransaction.h; sourceTree = "<group>"; };
+		54CC2A7D22CD2EA400D1FB55 /* CashTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashTransaction.m; sourceTree = "<group>"; };
+		54CC2A7E22CD2EA400D1FB55 /* CreditCardTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardTransaction.h; sourceTree = "<group>"; };
+		54CC2A7F22CD2EA400D1FB55 /* CreditCardTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardTransaction.m; sourceTree = "<group>"; };
+		54CC2A8022CD2EA400D1FB55 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
+		54CC2A8122CD2EA400D1FB55 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
+		54CC2A8222CD2EA400D1FB55 /* TransactionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionDelegate.h; sourceTree = "<group>"; };
+		54CC2A8322CD2EA400D1FB55 /* ATMTransactionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMTransactionDelegate.h; sourceTree = "<group>"; };
+		54CC2A8422CD2EA400D1FB55 /* ATMTransactionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMTransactionDelegate.m; sourceTree = "<group>"; };
+		54CC2A8522CD2EA400D1FB55 /* Destination+ATM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Destination+ATM.h"; sourceTree = "<group>"; };
+		54CC2A8622CD2EA400D1FB55 /* Destination+ATM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Destination+ATM.m"; sourceTree = "<group>"; };
+		54CC2A8722CD2EA400D1FB55 /* AppData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppData.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54CC2A3F22CD257100D1FB55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CC2A5822CD257100D1FB55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CC2A6322CD257100D1FB55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54CC2A3922CD257100D1FB55 = {
+			isa = PBXGroup;
+			children = (
+				54CC2A4422CD257100D1FB55 /* iVacation */,
+				54CC2A5E22CD257100D1FB55 /* iVacationTests */,
+				54CC2A6922CD257100D1FB55 /* iVacationUITests */,
+				54CC2A4322CD257100D1FB55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54CC2A4322CD257100D1FB55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54CC2A4222CD257100D1FB55 /* iVacation.app */,
+				54CC2A5B22CD257100D1FB55 /* iVacationTests.xctest */,
+				54CC2A6622CD257100D1FB55 /* iVacationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54CC2A4422CD257100D1FB55 /* iVacation */ = {
+			isa = PBXGroup;
+			children = (
+				54CC2A7822CD2EA400D1FB55 /* Budget.h */,
+				54CC2A7922CD2EA400D1FB55 /* Budget.m */,
+				54CC2A7A22CD2EA400D1FB55 /* Transaction.h */,
+				54CC2A7B22CD2EA400D1FB55 /* Transaction.m */,
+				54CC2A7C22CD2EA400D1FB55 /* CashTransaction.h */,
+				54CC2A7D22CD2EA400D1FB55 /* CashTransaction.m */,
+				54CC2A7E22CD2EA400D1FB55 /* CreditCardTransaction.h */,
+				54CC2A7F22CD2EA400D1FB55 /* CreditCardTransaction.m */,
+				54CC2A8022CD2EA400D1FB55 /* Destination.h */,
+				54CC2A8122CD2EA400D1FB55 /* Destination.m */,
+				54CC2A8222CD2EA400D1FB55 /* TransactionDelegate.h */,
+				54CC2A8322CD2EA400D1FB55 /* ATMTransactionDelegate.h */,
+				54CC2A8422CD2EA400D1FB55 /* ATMTransactionDelegate.m */,
+				54CC2A8522CD2EA400D1FB55 /* Destination+ATM.h */,
+				54CC2A8622CD2EA400D1FB55 /* Destination+ATM.m */,
+				54CC2A8722CD2EA400D1FB55 /* AppData.plist */,
+				54CC2A4822CD257100D1FB55 /* AppDelegate.h */,
+				54CC2A4922CD257100D1FB55 /* AppDelegate.m */,
+				54CC2A4B22CD257100D1FB55 /* ViewController.h */,
+				54CC2A4C22CD257100D1FB55 /* ViewController.m */,
+				54CC2A4E22CD257100D1FB55 /* Main.storyboard */,
+				54CC2A5122CD257100D1FB55 /* Assets.xcassets */,
+				54CC2A5322CD257100D1FB55 /* LaunchScreen.storyboard */,
+				54CC2A5622CD257100D1FB55 /* Info.plist */,
+				54CC2A4522CD257100D1FB55 /* Supporting Files */,
+			);
+			path = iVacation;
+			sourceTree = "<group>";
+		};
+		54CC2A4522CD257100D1FB55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54CC2A4622CD257100D1FB55 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54CC2A5E22CD257100D1FB55 /* iVacationTests */ = {
+			isa = PBXGroup;
+			children = (
+				54CC2A5F22CD257100D1FB55 /* iVacationTests.m */,
+				54CC2A6122CD257100D1FB55 /* Info.plist */,
+			);
+			path = iVacationTests;
+			sourceTree = "<group>";
+		};
+		54CC2A6922CD257100D1FB55 /* iVacationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				54CC2A6A22CD257100D1FB55 /* iVacationUITests.m */,
+				54CC2A6C22CD257100D1FB55 /* Info.plist */,
+			);
+			path = iVacationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54CC2A4122CD257100D1FB55 /* iVacation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54CC2A6F22CD257100D1FB55 /* Build configuration list for PBXNativeTarget "iVacation" */;
+			buildPhases = (
+				54CC2A3E22CD257100D1FB55 /* Sources */,
+				54CC2A3F22CD257100D1FB55 /* Frameworks */,
+				54CC2A4022CD257100D1FB55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iVacation;
+			productName = iVacation;
+			productReference = 54CC2A4222CD257100D1FB55 /* iVacation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54CC2A5A22CD257100D1FB55 /* iVacationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54CC2A7222CD257100D1FB55 /* Build configuration list for PBXNativeTarget "iVacationTests" */;
+			buildPhases = (
+				54CC2A5722CD257100D1FB55 /* Sources */,
+				54CC2A5822CD257100D1FB55 /* Frameworks */,
+				54CC2A5922CD257100D1FB55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54CC2A5D22CD257100D1FB55 /* PBXTargetDependency */,
+			);
+			name = iVacationTests;
+			productName = iVacationTests;
+			productReference = 54CC2A5B22CD257100D1FB55 /* iVacationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54CC2A6522CD257100D1FB55 /* iVacationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54CC2A7522CD257100D1FB55 /* Build configuration list for PBXNativeTarget "iVacationUITests" */;
+			buildPhases = (
+				54CC2A6222CD257100D1FB55 /* Sources */,
+				54CC2A6322CD257100D1FB55 /* Frameworks */,
+				54CC2A6422CD257100D1FB55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54CC2A6822CD257100D1FB55 /* PBXTargetDependency */,
+			);
+			name = iVacationUITests;
+			productName = iVacationUITests;
+			productReference = 54CC2A6622CD257100D1FB55 /* iVacationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54CC2A3A22CD257100D1FB55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Naitra;
+				TargetAttributes = {
+					54CC2A4122CD257100D1FB55 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					54CC2A5A22CD257100D1FB55 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 54CC2A4122CD257100D1FB55;
+					};
+					54CC2A6522CD257100D1FB55 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 54CC2A4122CD257100D1FB55;
+					};
+				};
+			};
+			buildConfigurationList = 54CC2A3D22CD257100D1FB55 /* Build configuration list for PBXProject "iVacation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54CC2A3922CD257100D1FB55;
+			productRefGroup = 54CC2A4322CD257100D1FB55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54CC2A4122CD257100D1FB55 /* iVacation */,
+				54CC2A5A22CD257100D1FB55 /* iVacationTests */,
+				54CC2A6522CD257100D1FB55 /* iVacationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54CC2A4022CD257100D1FB55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CC2A5522CD257100D1FB55 /* LaunchScreen.storyboard in Resources */,
+				54CC2A5222CD257100D1FB55 /* Assets.xcassets in Resources */,
+				54CC2A8F22CD2EA400D1FB55 /* AppData.plist in Resources */,
+				54CC2A5022CD257100D1FB55 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CC2A5922CD257100D1FB55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CC2A6422CD257100D1FB55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54CC2A3E22CD257100D1FB55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CC2A4D22CD257100D1FB55 /* ViewController.m in Sources */,
+				54CC2A4A22CD257100D1FB55 /* AppDelegate.m in Sources */,
+				54CC2A8C22CD2EA400D1FB55 /* Destination.m in Sources */,
+				54CC2A8822CD2EA400D1FB55 /* Budget.m in Sources */,
+				54CC2A8922CD2EA400D1FB55 /* Transaction.m in Sources */,
+				54CC2A4722CD257100D1FB55 /* main.m in Sources */,
+				54CC2A8D22CD2EA400D1FB55 /* ATMTransactionDelegate.m in Sources */,
+				54CC2A8A22CD2EA400D1FB55 /* CashTransaction.m in Sources */,
+				54CC2A8B22CD2EA400D1FB55 /* CreditCardTransaction.m in Sources */,
+				54CC2A8E22CD2EA400D1FB55 /* Destination+ATM.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CC2A5722CD257100D1FB55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CC2A6022CD257100D1FB55 /* iVacationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54CC2A6222CD257100D1FB55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CC2A6B22CD257100D1FB55 /* iVacationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54CC2A5D22CD257100D1FB55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54CC2A4122CD257100D1FB55 /* iVacation */;
+			targetProxy = 54CC2A5C22CD257100D1FB55 /* PBXContainerItemProxy */;
+		};
+		54CC2A6822CD257100D1FB55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54CC2A4122CD257100D1FB55 /* iVacation */;
+			targetProxy = 54CC2A6722CD257100D1FB55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		54CC2A4E22CD257100D1FB55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54CC2A4F22CD257100D1FB55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		54CC2A5322CD257100D1FB55 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54CC2A5422CD257100D1FB55 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54CC2A6D22CD257100D1FB55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		54CC2A6E22CD257100D1FB55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54CC2A7022CD257100D1FB55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iVacation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Naitra.iVacation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		54CC2A7122CD257100D1FB55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iVacation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Naitra.iVacation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		54CC2A7322CD257100D1FB55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iVacationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Naitra.iVacationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iVacation.app/iVacation";
+			};
+			name = Debug;
+		};
+		54CC2A7422CD257100D1FB55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iVacationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Naitra.iVacationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iVacation.app/iVacation";
+			};
+			name = Release;
+		};
+		54CC2A7622CD257100D1FB55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iVacationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Naitra.iVacationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = iVacation;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		54CC2A7722CD257100D1FB55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iVacationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Naitra.iVacationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = iVacation;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54CC2A3D22CD257100D1FB55 /* Build configuration list for PBXProject "iVacation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54CC2A6D22CD257100D1FB55 /* Debug */,
+				54CC2A6E22CD257100D1FB55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54CC2A6F22CD257100D1FB55 /* Build configuration list for PBXNativeTarget "iVacation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54CC2A7022CD257100D1FB55 /* Debug */,
+				54CC2A7122CD257100D1FB55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		54CC2A7222CD257100D1FB55 /* Build configuration list for PBXNativeTarget "iVacationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54CC2A7322CD257100D1FB55 /* Debug */,
+				54CC2A7422CD257100D1FB55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		54CC2A7522CD257100D1FB55 /* Build configuration list for PBXNativeTarget "iVacationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54CC2A7622CD257100D1FB55 /* Debug */,
+				54CC2A7722CD257100D1FB55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54CC2A3A22CD257100D1FB55 /* Project object */;
+}
